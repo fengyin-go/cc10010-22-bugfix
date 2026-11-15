@@ -17,6 +17,8 @@ export type ModuleMeta = {
   statuses: string[]
   actions: string[]
   actionTargets: Record<string, string>
+  // 个别动作允许的源状态（默认要求源状态是目标状态的前一位，按顺序单向推进）。
+  actionSources?: Record<string, string>
   metrics: string[]
 }
 
